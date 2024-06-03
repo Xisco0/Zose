@@ -260,6 +260,7 @@ header .bottom-div .inner-div nav ul li:hover{
 .bank-div .bank-img img{
   width: 70px;
   height: 70px;
+  cursor: pointer;
 }
 .bank-text{
     width: 300px;
@@ -348,8 +349,8 @@ header .bottom-div .inner-div nav ul li:hover{
     visibility: hidden;
 }
 .product-div .network-camera-div:hover .like-div{
-    transition: 0.3ms ease-in-out;
-  visibility: visible;
+    transition: 0.5s;
+    visibility: visible;
 }
 .product-div .network-camera-div .camera-img .like-div .like-div-in{
     width: 50px;
@@ -476,15 +477,21 @@ header .bottom-div .inner-div nav ul li:hover{
 }
 .test-div .test-div-in .img-div{
     width: 100%;
-    
+    overflow: hidden;
 }
 .test-div .test-div-in .img-div img{
     width: 325px;
     height: 270px;
     cursor: pointer;
     max-width: 100%;
-   
+    object-fit: cover;
+    transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
 } 
+.test-div .test-div-in:hover  .img-div img{
+    -webkit-transform: scale(1.10);
+	-moz-transform: scale(1.10);
+	transform: scale(1.10);
+}
 
 .test-div .test-div-in .test-text{
     width: 100%;
