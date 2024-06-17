@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 body{
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,9 +98,44 @@ header .bottom-div .inner-div .icon-div i .count{
     top: -40px;
     left: 20px;
 }
+header .bottom-div .inner-div nav .sub-home{
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    top: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    color: #000;
+    visibility: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+}
+
+ .home-div{
+    /* color: red; */
+ }
+header .bottom-div .inner-div nav .sub-home ul{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: fit-content;
+
+    margin: auto;
+}
+header .bottom-div .inner-div nav .sub-home ul li{
+    font-size: 15px;
+    font-weight: 100;
+}
+header .bottom-div .inner-div nav .sub-home ul li:hover{
+    transition: 0.3s ease-in;
+    color: #108bea;
+}
 header .bottom-div .inner-div .icon-div{
     cursor: pointer;
 }
+header .bottom-div .inner-div .icon-div .bi-list{
+   visibility: hidden;
+}
+
 header .bottom-div .inner-div nav{
     display: flex;
 }
@@ -108,8 +144,9 @@ header .bottom-div .inner-div nav ul{
     gap: 45px;
     padding: 0px;
     margin: 0px;
-   
 }
+
+
 header .bottom-div .inner-div nav ul li{
     list-style: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -125,7 +162,23 @@ header .bottom-div .inner-div nav ul li:hover{
 
 
 
-
+@media all and (max-width:1072px) {
+    header .top-div .inner-div{
+        width: 85%;
+    }
+    header .bottom-div .inner-div nav{
+        display: none;
+    }
+    header .bottom-div .inner-div .icon-div{
+        display: none;
+    }
+    header .top-div .inner-div .icon-div{
+        /* display: none; */
+    }
+    header .bottom-div .inner-div .icon-div .bi-list{
+        visibility: visible;
+    }
+}
 
 
 
@@ -186,42 +239,58 @@ header .bottom-div .inner-div nav ul li:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
 .index-content{
     position: absolute;
     top: 100%;
     width: 100%;
 }
+
 .body-div{
     width: 100%;
     background-color: #fff;
-    min-height: 50px;
     padding: 50px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.body-div .body-div-in{
+
+.body-div-in{
     width: 85%;
+    min-height: 300px;
     max-width: 1200px;
-}
-.body-div-in .logo-div{
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.logo-div{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    align-items: center;
+  background-color: #fff;
 }
 
 
 
  .solution{
     background-color: #FAFAFA;
+    min-height: 50px;
 }
-.solution .body-div-in{
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .solution-text{
     width: 42%;
     text-align: center;
@@ -300,7 +369,7 @@ header .bottom-div .inner-div nav ul li:hover{
 
 
 
-.body-div-in .product-div{
+.product-div{
     width: 100%;
     margin-top: 30px;
     display: flex;
@@ -396,7 +465,7 @@ header .bottom-div .inner-div nav ul li:hover{
  
 
 
-.body-div-in .security-div{
+.security-div{
     width: 100%;
     display: flex;
 }
@@ -463,7 +532,7 @@ header .bottom-div .inner-div nav ul li:hover{
 
 
 
-.body-div-in .test-div{
+ .test-div{
     width: 100%;
     margin-top: 40px;
     display: flex;
@@ -522,25 +591,25 @@ header .bottom-div .inner-div nav ul li:hover{
 
 
 
-.body-div-in .testimony-div{
+.testimony-div{
     width: 100%;
     margin: 50px 0;
     display: flex;
     gap: 20px;
 }
-.body-div-in .testimony-div-in{
+ .testimony-div-in{
     width: 340px;
     height: 230px;
     padding: 20px 20px;
     background-color: #FAFAFA;
 }
-.body-div-in .testimony-div-in .img-div{
+ .testimony-div-in .img-div{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.body-div-in .testimony-div-in .img-div img{
+ .testimony-div-in .img-div img{
     width: 70px;
     height: 70px;
   border-radius: 50%;
@@ -609,7 +678,7 @@ header .bottom-div .inner-div nav ul li:hover{
 .feedback .body-div-in{
     min-height: 300px;
 }
-.body-div-in .feedback-div{
+ .feedback-div{
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -624,7 +693,7 @@ header .bottom-div .inner-div nav ul li:hover{
  flex-direction: column;
  justify-content: center;
 }
-.body-div-in .feedback-div .form .input{
+ .feedback-div .form .input{
     width: 90%;
     margin:0 auto;
     display: flex;
@@ -672,7 +741,7 @@ header .bottom-div .inner-div nav ul li:hover{
     
 }
 .input textarea{
-    width: calc(95% - 50px);
+    width: 96%;
     border: 1px solid #D6D6D6;
     outline: none;
     height: 80px;
@@ -790,7 +859,7 @@ header .bottom-div .inner-div nav ul li:hover{
 }
 
 .delivery-div .delivery-div-in:hover img{
-        animation: 0.5s ease-in-out tada;
+    animation: 0.5s ease-in-out tada;
 }
 
 .delivery-div .delivery-div-in .img-div img{
@@ -811,7 +880,7 @@ header .bottom-div .inner-div nav ul li:hover{
     margin: 0;
 }
 
-.body-div-in .about-div{
+ .about-div{
     margin-top: 40px;
     width: 100%;
     font-family:  Lato, sans-serif;
@@ -851,7 +920,7 @@ header .bottom-div .inner-div nav ul li:hover{
 .media ul li i{
     margin-right: 15px;
 }
-.body-div-in .team-div{
+ .team-div{
     margin-top: 40px;
     padding: 10px 0 0 0;
     width: 100%;
@@ -859,6 +928,353 @@ header .bottom-div .inner-div nav ul li:hover{
     justify-content: space-between;
     border-top: 1px solid rgb(33, 31, 31);
 }
-.body-div-in .team-div span{
+.team-div span{
    color: #fff;
 }
+
+
+ .index-cont{
+    position: absolute;
+    width: 100%;
+    top: 0;
+ }
+.about{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 40px 0;
+    margin: 60px auto;
+}
+
+.about .about-text .about-text-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 10px;
+}
+.about .about-text h3{
+    margin: 0;
+}
+.about .about-text .about-text-div .circle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.about .about-text h3{
+    font-size: 30px;
+    color: #000;
+}
+.about-body{
+    width: 100%;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.experience-div{
+    width: 50%;
+    height: 400px;
+}
+.experience-div-in{
+    width: 50%;
+    height: 400px;
+}
+.experience-div .img-div{
+    position: relative;
+}
+.experience-div .img-div .top-circle{
+    position: absolute;
+    bottom: -5%;
+    right: 11%;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #000000;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Rajdhani", sans-serif;
+    color: #fff;
+}
+.img-div .top-circle .circle-text{
+    width: 200px;
+    text-align: center;
+    line-height: 25px;
+    font-family: "Rajdhani", sans-serif;
+    font-style: normal;
+}
+.img-div .top-circle .circle-text h3{
+    color: #fff;
+}
+.img-div .top-circle .circle-text-div{
+    margin: 50px 0;
+}
+.img-div .top-circle .circle-text-div h2{
+    font-size: 130px;
+    font-family: "Rajdhani", sans-serif;
+    font-style: normal;
+    margin: 0;
+    color: transparent;
+    -webkit-text-stroke:1px rgb(255, 255, 255);
+}
+.experience-text h3{
+    font-size: 30px;
+    font-family: Rajdhani, sans-serif;
+    font-style: normal;
+    line-height: 35px;
+    margin: 0 0 30px 0;
+}
+.experience-text p{
+    line-height: 25px;
+}
+.experience-text h4{
+    font-size: 20px;
+    font-family: Rajdhani, sans-serif;
+    font-style: normal;
+}
+.experience-div-in button{
+    padding: 15px 20px;
+    background-color: #108BEA;
+    width: 180px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.experience-div-in button:hover{
+    transition: 0.5s;
+    background-color: #000;
+}
+.services-div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.services-div .services-div-in{
+    width: 30%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F6F6;
+    font-family:  "Rajdhani", sans-serif;
+}
+.services-div-in .img-div{
+    margin-top: 20px;
+}
+.services-div-in .service-text{
+    width: 94%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+    color: #222222;
+}
+.services-div-in button{
+    padding: 12px 18px;
+    background-color: #108BEA;
+    width: 180px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.services-div-in button:hover{
+    transition: 0.5s;
+    background-color: #000;
+}
+.client{
+  min-height: 0;
+}
+.client .client-div{
+    width: 90%;
+    height: 300px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F6F6F6;
+}
+.client-div .client-text{
+    width: 85%;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.member-div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.member-div .member-div-in{
+    width: 23%;
+    height: 390px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    box-shadow: rgb(233, 233, 233) 0px 0px 10px;
+}
+.member-div .member-div-in .img-div{
+    position: relative;
+}
+.member-div .member-div-in .img-div img{
+    width: 100%;
+    height: 320px;
+}
+.member-div-in .text-div{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.member-div-in .text-div h3{
+    font-family: Rajdhani, sans-serif;
+    margin: 0;
+    font-weight: bolder;
+}
+.member-div-in .text-div span{
+    margin: 10px 0;
+}
+.inner-contact{
+    position: absolute;
+    bottom: 4%;
+    left: 3%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.inner-contact .inner-contact-div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #474bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+    /* transition: 0.5s ease-in-out; */
+}
+.inner-contact .inner-contact-div:hover{
+    background-color: #222222;
+}
+.member-div .member-div-in:hover .inner-contact .inner-contact-div{
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spinner {
+    --radius: 33.6;
+    --size: 16.8;
+    position: relative;
+    width: calc(var(--size) * 1px);
+    height: calc(var(--size) * 1px);
+ }
+ .preloader{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+ }
+ .spinner div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #474bff;
+    border-radius: 50%;
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px));
+    animation: spinner-19rk4d 1.5s calc(var(--delay) * 1.2s) infinite ease;
+ }
+ .spinner div:nth-child(1) {
+    --angle: 45;
+    --delay: 0.1;
+ }
+ 
+ .spinner div:nth-child(2) {
+    --angle: 90;
+    --delay: 0.2;
+ }
+ 
+ .spinner div:nth-child(3) {
+    --angle: 135;
+    --delay: 0.3;
+ }
+ 
+ .spinner div:nth-child(4) {
+    --angle: 180;
+    --delay: 0.4;
+ }
+ 
+ .spinner div:nth-child(5) {
+    --angle: 225;
+    --delay: 0.5;
+ }
+ 
+ .spinner div:nth-child(6) {
+    --angle: 270;
+    --delay: 0.6;
+ }
+ 
+ .spinner div:nth-child(7) {
+    --angle: 315;
+    --delay: 0.7;
+ }
+ 
+ .spinner div:nth-child(8) {
+    --angle: 360;
+    --delay: 0.8;
+ }
+ 
+ @keyframes spinner-19rk4d {
+    0%, 30%, 50%, 100% {
+       transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px)) scale(0);
+    }
+ 
+    40% {
+       transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+    }
+ }

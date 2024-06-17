@@ -1,8 +1,9 @@
+<?php include 'config/config.php'?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php include "meta.php"?>
-	<title>ZOSE</title>
+	<title><?php echo "$thename"?></title>
 	
 </head>
 <body>
@@ -10,7 +11,7 @@
 
 	<section class="slide-div">
 		<div class="slide-div-in">
-			<div class="control-div">
+			<div class="control-div" data-aos="zoom-in" data-aos-duration="2200">
 				<h2><span> CCTV SYSTEMS </span><br/>& ACCESS CONTROL</h2>
 				<p>
 					Suspendisse tincidunt ornare sem, at venenatis<br/> lorem tempor vel. 
@@ -21,30 +22,28 @@
 				<button class="btn">Order Now <i class="bi-arrow-right"></i></button>
 			</div>
 
-			<div class="img-div">
+			<div class="img-div" data-aos="fade-in" data-aos-duration="2200">
 				<img src="./all-images/Images/camera.png" alt="camera">
 			</div>
 		</div>
 	</section>
 
 	<section class="index-content">
-		<section class="body-div">
-			<div class="body-div-in">
-				<div class="logo-div">
-					<img src="./all-images/Images/1_compact.png" alt="sauter" title="sauter">
-					<img src="./all-images/Images/2_compact.png" alt="evolved" title="evolved">
-					<img src="./all-images/Images/3_compact.png" alt="techbrand" title="techbrand">
-					<img src="./all-images/Images/4_compact.png" alt="smatric" title="smatric">
-					<img src="./all-images/Images/1_compact.png" alt="sauter" title="sauter">
-				</div>
-			</div>
-		</section>
+		
+		<div class="logo-div" >
+			<img src="./all-images/Images/1_compact.png" alt="sauter" title="sauter">
+			<img src="./all-images/Images/2_compact.png" alt="evolved" title="evolved">
+			<img src="./all-images/Images/3_compact.png" alt="techbrand" title="techbrand">
+			<img src="./all-images/Images/4_compact.png" alt="smatric" title="smatric">
+			<img src="./all-images/Images/1_compact.png" alt="sauter" title="sauter">
+		</div>
+		
 
 
 
 		<section class="body-div solution">
 			<div class="body-div-in">
-				<div class="solution-text">
+				<div class="solution-text" data-aos="fade-out" data-aos-duration="2200">
 					<h2>Solution We Offer</h2>
 					<p>
 						Contrary to popular belief Lorem Ipsum is not simply 
@@ -53,7 +52,7 @@
 				</div>
 
 				<div class="sectors-div">
-					<div class="bank-div">
+					<div class="bank-div" data-aos="flip-right" data-aos-duration="2200">
 						<div class="bank-img"><img src="./all-images/Images/bank.png" alt="bank-logo"></div>
 						<div class="bank-text">
 							<a href="#">Banking Sectors</a>
@@ -64,7 +63,7 @@
 						</div>
 					</div>
 
-					<div class="bank-div education">
+					<div class="bank-div education" data-aos="flip-right" data-aos-duration="2200">
 					<div class="bank-img"><img src="./all-images/Images/book.png" alt="education-logo"></div>
 						<div class="bank-text">
 							<a href="#">Education Institute</a>
@@ -74,7 +73,7 @@
 						</div>
 					</div>
 
-					<div class="bank-div">
+					<div class="bank-div" data-aos="flip-right" data-aos-duration="2200">
 						<div class="bank-img"><img src="./all-images/Images/hospital.png" alt="hospital-logo"></div>
 							<div class="bank-text">
 								<a href="#">Hospital Sectors</a>
@@ -85,7 +84,7 @@
 							</div>
 					</div>
 
-					<div class="bank-div education">
+					<div class="bank-div education" data-aos="flip-right" data-aos-duration="2200">
 							<div class="bank-img"><img src="./all-images/Images/shop.png" alt="shop-logo"></div>
 							<div class="bank-text">
 								<a href="#">Shoping & Retail</a>
@@ -95,7 +94,7 @@
 							</div>
 					</div>
 
-					<div class="bank-div">
+					<div class="bank-div" data-aos="flip-right" data-aos-duration="2200">
 							<div class="bank-img"><img src="./all-images/Images/estate.png" alt="estate-logo"></div>
 							<div class="bank-text">
 								<a href="#">Real Estate Site</a>
@@ -106,7 +105,7 @@
 					</div>
 
 
-					<div class="bank-div education">
+					<div class="bank-div education" data-aos="flip-right" data-aos-duration="2200">
 						<div class="bank-img">
 							<img src="./all-images/Images/law.png" alt="law-logo">
 						</div>
@@ -126,15 +125,15 @@
 
 		<section class="body-div gadget">
 			<div class="body-div-in">
-				<div class="solution-text">
+				<div class="solution-text" data-aos="fade-out" data-aos-duration="2200">
 					<h2>Our Latest Products</h2>
 					<p>Contrary to popular belief Lorem Ipsum is not simply 
 						random text nam eget dui etiam whoncus.
 					</p>
 				</div>
 
-				<div class="product-div">
-					<div class="network-camera-div">
+				<div class="product-div" >
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 							<div class="soldout-div"><span>soldout</span></div>
 							<img src="./all-images/Images/camera-1.jpg" alt="camera-1">
@@ -144,6 +143,7 @@
 								<div class="like-div-in"><i class="bi-bag-dash"></i></div>
 							</div>
 						</div>
+
 						<div class="camera-text">
 							<a href="#">Network PTZ Camera</a>
 							
@@ -154,7 +154,7 @@
 					</div>
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 							<div class="soldout-div"><span>sale</span></div>
 							<img src="./all-images/Images/camera-2.jpg" alt="camera-1">
@@ -175,7 +175,7 @@
 
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 					
 							<img src="./all-images/Images/camera-3.jpg" alt="camera-1">
@@ -195,7 +195,7 @@
 					</div>
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 							
 							<img src="./all-images/Images/camera-4.jpg" alt="camera-1">
@@ -216,7 +216,7 @@
 
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 							<div class="soldout-div"><span>sale</span></div>
 							<img src="./all-images/Images/camera-5.jpg" alt="camera-1">
@@ -237,7 +237,7 @@
 
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 							<div class="soldout-div"><span>sale</span></div>
 							<img src="./all-images/Images/camera-6.jpg" alt="camera-1">
@@ -259,7 +259,7 @@
 
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 
 							<img src="./all-images/Images/camera-7.jpg" alt="camera-1">
@@ -279,7 +279,7 @@
 					</div>
 
 
-					<div class="network-camera-div">
+					<div class="network-camera-div" data-aos="fade-in" data-aos-duration="2200">
 						<div class="camera-img">
 
 							<img src="./all-images/Images/camera-8.jpg" alt="camera-1">
@@ -319,7 +319,7 @@
 								Get our latest trends and techniques used in product development digital marketing business.
 							</p>
 						</div>
-						<div class="control-div">
+						<div class="control-div" data-aos="fade-out" data-aos-duration="2200">
 							<div class="control-div-in">
 									<div class="img-div"><img src="./all-images/Images/padlock.png" alt="padlock" title="padlock"></div>
 									<div class="control-text">
@@ -329,7 +329,7 @@
 							</div>
 
 
-							<div class="control-div-in">
+							<div class="control-div-in" data-aos="fade-out" data-aos-duration="2200">
 									<div class="img-div"><img src="./all-images/Images/cctv.png" alt="cctv" title="cctv"></div>
 									<div class="control-text">
 										<span>Video Surveillance</span>
@@ -339,7 +339,7 @@
 
 
 						</div>
-						<div class="control-div">
+						<div class="control-div" data-aos="fade-out" data-aos-duration="2200">
 							<div class="control-div-in">
 									<div class="img-div"><img src="./all-images/Images/access-control.png" alt="access-control" title="access-control"></div>
 									<div class="control-text">
@@ -349,7 +349,7 @@
 							</div>
 
 
-							<div class="control-div-in">
+							<div class="control-div-in" data-aos="fade-out" data-aos-duration="2200">
 									<div class="img-div"><img src="./all-images/Images/video-call.png" alt="video-call" title="video-call"></div>
 									<div class="control-text">
 										<span>Video Intercom</span>
@@ -360,7 +360,7 @@
 
 						</div>
 					</div>
-					<div class="security-img">
+					<div class="security-img" data-aos="zoom-in" data-aos-duration="2200">
 						<img src="./all-images/Images/big-camera.png" alt="security-camera" title="security-camera">
 					</div>
 				</div>
@@ -370,7 +370,7 @@
 
 		<section class="body-div solution">
 
-			<div class="body-div-in">
+			<div class="body-div-in" data-aos="fade-out" data-aos-duration="2200">
 				<div class="solution-text">
 					<h2>Recent Articles</h2>
 					<p>
@@ -428,7 +428,7 @@
 		<section class="body-div gadget">
 
 					<div class="body-div-in">
-						<div class="solution-text">
+						<div class="solution-text" data-aos="fade-out" data-aos-duration="2200">
 							<h2>Testimonial</h2>
 							<p>
 								Contrary to popular belief Lorem Ipsum is not simply 
@@ -437,8 +437,8 @@
 						</div>
 
 
-						<div class="testimony-div">
-							<div class="testimony-div-in">
+						<div class="testimony-div" >
+							<div class="testimony-div-in" data-aos="flip-left" data-aos-duration="2200">
 								<div class="img-div"><img src="./all-images/Images/profile-1.jpg" alt="testimony" ></div>
 								<div class="testimony-text">
 									<p>I am extremely impressed with the CCTV system installed by ZOSE. 
@@ -450,7 +450,7 @@
 
 
 
-							<div class="testimony-div-in">
+							<div class="testimony-div-in" data-aos="flip-left" data-aos-duration="2200">
 								<div class="img-div"><img src="./all-images/Images/profile-2.jpg" alt="testimony" ></div>
 								<div class="testimony-text">
 									<p>
@@ -463,7 +463,7 @@
 
 
 
-							<div class="testimony-div-in">
+							<div class="testimony-div-in" data-aos="flip-left" data-aos-duration="2200">
 								<div class="img-div"><img src="./all-images/Images/profile-3.jpg" alt="testimony" ></div>
 								<div class="testimony-text">
 									<p>
@@ -636,5 +636,8 @@
 		<?php include "footer.php"?>
 				
 	</section>
+	<?php include "preloader.php"?>
+
+
 </body>
 </html>

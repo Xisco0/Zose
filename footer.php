@@ -1,5 +1,5 @@
 <footer class="body-div footer" data-aos="fade-in" data-aos-duration="2200">
-    <div class="body-div-in">
+    <div class="body-div-in" >
         <div class="delivery-div">
             <div class="delivery-div-in">
                 <div class="img-div"><img src="./all-images/Images/shipping.avif" alt="shipping"></div>
