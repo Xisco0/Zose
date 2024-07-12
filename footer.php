@@ -47,10 +47,10 @@
             <div class="info-div">
                 <h3>Information</h3>
                 <ul>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="about">About us</a></li>
                     <li><a href="#">Leadership</a></li>
-                    <li><a href="#">News & Media</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="blog">News & Media</a></li>
+                    <li><a href="services">Services</a></li>
                     <li><a href="#">Our Reviews</a></li>
                 </ul>
             </div>

@@ -17,7 +17,6 @@
         </div>
     </div>
 
-
     <section class="body-div">
         <div class="body-div-in about-body">
             <div class="experience-div">
@@ -51,7 +50,7 @@
     </section>
 
     <section class="body-div">
-        <div class="body-div-in">
+        <div class="body-div-in service-inner">
             <div class="solution-text" data-aos="fade-out" data-aos-duration="2200">
                 <h2>Reasons to Choose Us</h2>
                 <p>
@@ -116,8 +115,8 @@
                 </div>
                 <div class="client-text" data-aos="fade-out" data-aos-duration="2200">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                         laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit.</p>
-                         <h4>Hester Perkins</h4>
+                        laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit.</p>
+                    <h4>Hester Perkins</h4>
                 </div>
             </div>
         </div>
