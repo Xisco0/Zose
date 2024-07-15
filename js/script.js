@@ -17,6 +17,9 @@ function _close_side_nav(){
   $('.index-menu-back-div').animate({'margin-left':'-100%'},400);
 }
 
+function _open_li(ids){
+  $('#'+ids+'-sub-li').slideToggle('slow');
+}
 
 function _collapse(div_id) {
 var x = document.getElementById(div_id + "num");

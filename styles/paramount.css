@@ -34,6 +34,15 @@ input{
 	--primary-color: #108bea;
 }
 
+@font-face{
+	font-family:body-font;
+	src: url(Poppins/Poppins-Regular.ttf);
+}
+@font-face{
+	font-family:title-font;
+	src: url(Poppins/Poppins-Bold.ttf);
+}
+
 
 /*--------------------------------------------------------------------------------------------------*/
 .sidenavdiv{
@@ -47,10 +56,9 @@ input{
 .sidenavdiv .sidenavdiv-in{
 	width:calc(100% - 252px);
 	height:100%;
-	right:0px;
+	left:0px;
 	position: absolute;
 }
-
 
 
 
@@ -77,7 +85,7 @@ input{
 }
 
 .index-menu-back-div .top-div .logo-div{
-	width:150px;
+	width: 150px;
 }
 
 
@@ -136,7 +144,10 @@ input{
 	width:90%;
 	margin-left:10%;
 	margin-top:6px;
-	/* display:none; */
+	display:none;
+}
+.index-menu-back-div .div-in .div .sub-li .expand-div li:hover{
+	background: transparent;
 }
 
 .index-menu-back-div .div-in .div .sub-li li{
