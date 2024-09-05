@@ -56,7 +56,7 @@ input{
 .sidenavdiv .sidenavdiv-in{
 	width:calc(100% - 252px);
 	height:100%;
-	left:0px;
+	right:0px;
 	position: absolute;
 }
 

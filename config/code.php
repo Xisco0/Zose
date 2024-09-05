@@ -1,3 +1,21 @@
-<?php require_once('config.php'); ?>
+<?php include 'constants.php'?>
+<?php 
+	$action=$_POST['action'];
+	  switch ($action){
 
-<?php include 'function.php'?>
+	case 'get-form':
+		// $staff_id=trim($_POST['staff_id']);
+		$page='reset_password';
+		require_once ('content-page.php');
+	break;
+
+	case 'password-reset-successful':
+		$page='password_reset_completed';
+	  	require_once('content-page.php');
+	break;
+
+
+
+	
+}
+?>
