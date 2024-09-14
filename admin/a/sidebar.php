@@ -5,12 +5,12 @@
         </div>
         <div class="list-div">
             <ul>
-                <li class="active-li" onclick="_getPage('dashboard', 'dashboard')" id="dashboard"><i class="bi-bank"></i> Dashboard<div class="pin"><i class="bi-pin"></i></div>
-                <div class="hidden" id="_dashboard"><i class="bi-speedometer2"></i> Admin Dashboard Overview</div>
+                <li class="active-li" onclick="_getPage('dashboard', 'dashboard')" id="dashboard"><i class="bi-speedometer2"></i> Dashboard<div class="pin"><i class="bi-pin"></i></div>
+                <div class="hidden" id="_dashboard"><i class="bi-speedometer2"></i> Admin Dashboard</div>
             </li>
             
                 <li class="active-li" onclick="_getPage('staff', 'staff')" id="staff"><i class="bi-people" ></i> Staff <div class="pin"><i class="bi-pin"></i></div>
-                <div class="hidden" id="_staff"><i class="bi-people"></i> All Active Staff</div>
+                <div class="hidden staff" id="_staff"><i class="bi-people"></i> All Active Staff</div>
             </li>
                 <li class="active-li" onclick="_getPage('product', 'product')" id="product"><i class="bi-camera"></i> Product <div class="pin"><i class="bi-pin"></i></div>
                 <div class="hidden" id="_product"><i class="bi-people"></i> All Active Products</div>

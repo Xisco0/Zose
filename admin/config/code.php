@@ -13,9 +13,6 @@
 		$page='password_reset_completed';
 	  	require_once('content-page.php');
 	break;
-
-
-
 	
 }
 ?>

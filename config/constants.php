@@ -16,7 +16,7 @@
 
 <script>
 var website_url='http://localhost/zosedemo.com';
-// var admin_login_local_url= website_url+'/admin/config/code'
-admin_portal_local= website_url+'/admin/a';
-admin_portal_dashboard= website_url+'/admin/a/config/code';
+var admin_login_local_url= website_url+'/admin/config/code'
+var admin_portal_local= website_url+'/admin/a';
+var admin_portal_dashboard= website_url+'/admin/a/config/code';
 </script>

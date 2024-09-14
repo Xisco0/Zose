@@ -20,7 +20,12 @@ html{
     font-family: allura-font;
     src: url(Allura-Regular/Allura-Regular.ttf);
 }
-
+:root{
+	--primary-color: #108bea;
+	--secondary-color: #fff;
+	--outline-color: #393A41;
+	--outline-input: #EFEFEF;
+}
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	font-family: title-font;
@@ -134,9 +139,11 @@ a{
 	height: 100%;
 	position: absolute;
 	background: rgba(0, 0, 0, .4);
-	z-index: 100;
+	z-index: 1000;
 	display: none;
+	overflow: hidden;
 }
+
 .alert {
 	width: calc(100% - 30px);
 	border: rgba(231, 107, 46, .4) 1px solid;
@@ -152,6 +159,7 @@ a{
 	color: #3498db;
 	cursor: pointer;
 	font-size: 13px;
+	font-family: body-font;
 }
 
 .alert-success {
@@ -159,6 +167,11 @@ a{
 	background: rgba(46, 204, 113, .05);
 	border-radius: 5px;
 }
+.staff-alert{
+	border-radius: 0px;
+	color: #fff;
+}
+
 
 .alert-failed {
 	border: rgba(231, 76, 60, .4) 1px solid;

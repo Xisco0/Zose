@@ -40,3 +40,23 @@ function _getPage(page, divid) {
     }
   });
 }
+
+function alert_close(){
+  $('#overlay-div').fadeOut(500);
+}
+
+
+function _get_form(page){
+  var action='get-form';
+  $('#overlay-div').html('<div class="ajax-loader"><br><img src="all-images/ajax-loader.gif"/></div>').fadeIn(500);
+  var dataString ='action=' + action + '&page=' + page;
+  $.ajax({
+  type: "POST",
+  url: admin_portal_dashboard,
+  data: dataString,
+  cache: false,
+  success: function(html){
+    $('#overlay-div').html(html);
+ }
+  });
+}

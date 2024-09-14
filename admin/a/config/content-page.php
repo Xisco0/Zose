@@ -1,6 +1,6 @@
 <?php if ($page=="dashboard"){?>
 
-    <div class="content-div">
+   
       
         <div class="project">
 
@@ -167,96 +167,148 @@
             
             </div>
         </div>
-    </div>
+ 
 
 <?php }?>
 
 <?php if ($page=="staff"){?>
     
-    <div class="content-div">
-        <div class="staff-div">
-        <select name="Select Status" id="">
-            <option value="Select Status">Select Status</option>
-            <option value="Active">Active</option>
-            <option value="Suspended">Suspended</option>
-        </select>
-        <input type="text" placeholder="Type Here to Search...." />
+
+        <div class="staff-div "> 
+            <select name="Select Status" id="">
+                <option value="Select Status">Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Suspended">Suspended</option>
+            </select>
+            <input type="text" placeholder="Type Here to Search...." />
         </div>
         <div class="admin-list">
             <div class="text-div">
                 <i class="bi-people"></i><span>Administrator's List</span>
             </div>
-            <button>
+            <button onclick="_get_form('add-staff')">
                 <span><i class="bi-file-plus"></i> Create a new admin</span>
             </button>
         </div>
         <div class="staff-div-in">
-            <div class="staff-inner">
+            <div class="staff-inner" onclick="_get_form('update-staff')">
                 <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
                 <div class="staff-name">
                     <h3>Bamirin Francis</h3>
                    <hr>
                     <p>ID: STTOOD2</p>
                     <span>ADMIN</span><br class="clear">
-                    <span>ACTIVE</span>
+                    <span class="active">ACTIVE</span>
                 </div>
             </div>
 
-            <div class="staff-inner">
+            <div class="staff-inner" onclick="_get_form('update-staff')">
                 <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
                 <div class="staff-name">
                     <h3>Bamirin Francis</h3>
                    <hr>
                     <p>ID: STTOOD2</p>
                     <span>ADMIN</span><br class="clear">
-                    <span>ACTIVE</span>
+                    <span class="active">ACTIVE</span>
                 </div>
             </div>
 
-            <div class="staff-inner">
+            <div class="staff-inner" onclick="_get_form('update-staff')">
                 <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
                 <div class="staff-name">
                     <h3>Bamirin Francis</h3>
                    <hr>
                     <p>ID: STTOOD2</p>
                     <span>ADMIN</span><br class="clear">
-                    <span>ACTIVE</span>
+                    <span class="active">ACTIVE</span>
                 </div>
             </div>
 
-            <div class="staff-inner">
+            <div class="staff-inner" onclick="_get_form('update-staff')">
                 <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
                 <div class="staff-name">
                     <h3>Bamirin Francis</h3>
                    <hr>
                     <p>ID: STTOOD2</p>
                     <span>ADMIN</span><br class="clear">
-                    <span>ACTIVE</span>
+                    <span class="active">ACTIVE</span>
                 </div>
             </div>
 
-            <div class="staff-inner">
+            <div class="staff-inner" onclick="_get_form('update-staff')">
                 <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
                 <div class="staff-name">
                     <h3>Bamirin Francis</h3>
                    <hr>
                     <p>ID: STTOOD2</p>
                     <span>ADMIN</span><br class="clear">
-                    <span>ACTIVE</span>
+                    <span class="active">ACTIVE</span>
                 </div>
             </div>
 
-            <div class="staff-inner">
+            <div class="staff-inner" onclick="_get_form('update-staff')">
                 <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
                 <div class="staff-name">
                     <h3>Bamirin Francis</h3>
                    <hr>
                     <p>ID: STTOOD2</p>
                     <span>ADMIN</span><br class="clear">
-                    <span>ACTIVE</span>
+                    <span class="active">ACTIVE</span>
                 </div>
             </div>
 
-        </div>
+            <div class="staff-inner" onclick="_get_form('update-staff')">
+                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
+                <div class="staff-name">
+                    <h3>Bamirin Francis</h3>
+                   <hr>
+                    <p>ID: STTOOD2</p>
+                    <span>ADMIN</span><br class="clear">
+                    <span class="active">ACTIVE</span>
+                </div>
+            </div>
+            
+        <div>
+
+<?php }?>
+
+<?php if ($page=="product"){?>
+    
+    <div class="admin-list">
+            <div class="text-div">
+                <i class="bi-people"></i><span>Product's List</span>
+            </div>
+            <button>
+                <span><i class="bi-file-plus"></i> Add a new product</span>
+            </button>
     </div>
+     
+    <!-- <div class="product-div">
+        <div class="network-camera-div aos-init aos-animate" data-aos="fade-in" data-aos-duration="2200">
+            <div class="camera-img">
+                <img src="../../all-images/Images/camera-6.jpg" alt="camera-1">
+            </div>
+            <div class="camera-text">
+                <p>10MP Starlight Camera</p>
+                
+                <div class="price">
+                    <span>$75.00</span><span class="price-div">$55.00</span>
+                </div>
+            </div>                
+        </div>
+    </div> -->
+
+    <div class="product-div">
+       <div class="product-div-in">
+            <div class="img-div"><img src="../../all-images/Images/camera-6.jpg" alt="camera-1"></div>
+            <div class="active-div">Active</div>
+            <h3>10MP Starlight Camera</h3>
+         
+            <div class="price">
+				<span>$60.00</span><span class="price-div">$39.00</span>
+			</div>
+       </div>
+
+    </div>
+
 <?php }?>
