@@ -1,4 +1,5 @@
 <?php include '../../../config/constants.php'?>
+<script src="js/session_validation.js"></script>
 <?php 
 
 $action=$_POST['action'];
@@ -13,6 +14,14 @@ $action=$_POST['action'];
 	    $page=$_POST['page'];
 		require_once ('form.php');
 	break;
+
+	case '_get_form_with_id':
+		$ids=$_POST['ids'];
+		$page=$_POST['page'];
+		require_once ('form.php');
+	break;
+
+	
 	}
 
 	

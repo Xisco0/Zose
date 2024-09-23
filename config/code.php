@@ -4,7 +4,6 @@
 	  switch ($action){
 
 	case 'get-form':
-		// $staff_id=trim($_POST['staff_id']);
 		$page='reset_password';
 		require_once ('content-page.php');
 	break;
@@ -14,8 +13,5 @@
 	  	require_once('content-page.php');
 	break;
 
-
-
-	
 }
 ?>

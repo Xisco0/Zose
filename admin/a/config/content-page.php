@@ -175,12 +175,25 @@
     
 
         <div class="staff-div "> 
-            <select name="Select Status" id="">
-                <option value="Select Status">Select Status</option>
-                <option value="Active">Active</option>
-                <option value="Suspended">Suspended</option>
+            <select name="Select Status" id="status_id"  onchange="_all_active_staff(this.value)">     
+                <option value="">Select Status</option>
+                <option value="1">Active</option>
+                <option value="2">Suspended</option>
+               
             </select>
-            <input type="text" placeholder="Type Here to Search...." />
+            <input type="text" placeholder="Type Here to Search...." id="search_txt" onkeyup="_all_active_staff('')"/>
+
+            <script>
+                superplaceholder({
+                el: search_txt,
+                sentences: [ 'Type Here to Search....', 'e.g francis@gmail.com', 'bamirin francis', 'stf0015664484332446', 'francis@yahoo.com' ],
+                options: {
+                letterDelay: 80,
+                loop: true,
+                startOnFocus: false
+                }
+                });
+        </script>
         </div>
         <div class="admin-list">
             <div class="text-div">
@@ -190,82 +203,11 @@
                 <span><i class="bi-file-plus"></i> Create a new admin</span>
             </button>
         </div>
-        <div class="staff-div-in">
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
-            </div>
+        <div class="staff-div-in" id="fetch_all_staff">
 
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
-            </div>
 
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
-            </div>
-
-            <div class="staff-inner" onclick="_get_form('update-staff')">
-                <div class="img-div"><img src="all-images/passport.jpg" alt="passport"></div>
-                <div class="staff-name">
-                    <h3>Bamirin Francis</h3>
-                   <hr>
-                    <p>ID: STTOOD2</p>
-                    <span>ADMIN</span><br class="clear">
-                    <span class="active">ACTIVE</span>
-                </div>
+            <div class="">
+                <script>_all_active_staff('');</script>    
             </div>
             
         <div>

@@ -1,7 +1,7 @@
 <?php if ($page=="add-staff"){?>
+    
 
     <div class="staff-details animated FadeinRight">
-       
        <div class="staff-details-div">
            <div class="text-div">
                <i class="bi-person-add"></i>
@@ -19,7 +19,7 @@
             <div class="form">
                 <div class="form-div">
                     <label>FULL NAME: <span>*</span></label>
-                    <input type="text" placeholder="FULL NAME" id="fullname"/>
+                    <input type="text"  placeholder="FULL NAME"  id="fullname">
                 </div>
 
                 <div class="form-div">
@@ -29,25 +29,26 @@
 
                 <div class="form-div">
                     <label>PHONE NUMBER: <span>*</span></label>
-                    <input type="text" placeholder="PHONE NUMBER" id="phone_number"/>
-                </div>
-
-                <div class="form-div">
-                    <label>HOME ADDRESS: <span>*</span></label>
-                    <input type="text" placeholder="HOME ADDRESS" id="home_address"/>
+                    <input type="text" placeholder="PHONE NUMBER" maxlength="11" id="phone_number"/>
                 </div>
 
                 <div class="form-div">
                     <label>SELECT ROLE: <span>*</span></label>
-                    <input type="text" placeholder="SELECT ROLE" id="select_role"/>
+                    <select id="role_id">
+                        <option value='select_role' disabled selected >--SELECT ROLE--</option>
+                        <script>_get_role();</script>
+                    </select>
                 </div>
 
                 <div class="form-div">
                     <label>SELECT STATUS: <span>*</span></label>
-                    <input type="text" placeholder="SELECT STATUS" id="select_status"/>
+                    <select id="status_id">
+                        <option value="select_status" disabled selected >--SELECT STATUS--</option>
+                        <script>_get_status();</script>
+                    </select>
                 </div>
 
-                <button><i class="bi-check"></i>SUBMIT</button>
+                <button id="submit_btn" onclick="_add_new_staff()"><i class="bi-check"></i> SUBMIT</button>
             </div>
         </div>
        
@@ -78,15 +79,16 @@
                     <div class="profile-div">
                         <div class="profile-div-inner">
                             <div class="profile-div-in">
-                                <img src="all-images/passport.jpg" alt="passport">
+                                <img src="all-images/image_profile.png" alt="passport">
                             </div>
 
                             <div class="text-div">
-                                <h3>Bamirin Francis</h3>
+                                <h3 id="staff-profile-fullname"></h3>
                                 <div class="status-div">
-                                    <label>STATUS: <span>ACTIVE</span> </label>
-                                    <label> | LAST LOGIN DATE: <span>2024-07-03 06:20:14</span></label>
+                                    <label>STATUS: <span id="get-staff-status-name"></span> </label>
+                                    <label> | LAST LOGIN DATE: <span id="get-staff-last-login"></span></label>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -102,22 +104,22 @@
                         <div class="input-div-in">
                             <div class="input-div-inn">
                                 <span>FULLNAME:</span><br clear="all"/>
-                                <input type="text" value="BAMIRIN FRANCIS" id="fullname"/>
+                                <input type="text"  id="profile-fullname"/>
                             </div>
 
                             <div class="input-div-inn">
                                 <span>EMAIL:</span><br clear="all"/>
-                                <input type="text" value="francisbamirin6@gmail.com" id="email"/>
+                                <input type="text"  id="profile-email"/>
                             </div>
 
                             <div class="input-div-inn">
                                 <span>HOME ADDRESS:</span><br clear="all"/>
-                                <input type="text" value="francisbamirin6@gmail.com" id="home_address"/>
+                                <input type="text"  id="profile-home-address"/>
                             </div>
 
                             <div class="input-div-inn">
                                 <span>PHONE NUMBER:</span><br clear="all"/>
-                                <input type="text" value="francisbamirin6@gmail.com" id="phone_number"/>
+                                <input type="text"  id="profile-phone-number"/>
                             </div>
 
                         </div>
@@ -132,7 +134,7 @@
                             <div class="staff-id">
                                 <span>STAFF ID:</span><br clear="all"/>
                                 <div class="input-inner">                             
-                                    <input type="text" value="LTS01220240627114043" id="fullname"/>
+                                    <input type="text"  id="profile-staff-id"/>
                                     <i class="bi-lock"></i>
                                 </div>                          
                             </div>
@@ -141,7 +143,7 @@
                                 <div class="inner">
                                     <span>DATE OF REGISTRATION:</span><br clear="all"/>
                                     <div class="input-inner text">              
-                                        <input type="text" value="2024-06-27 06:40:43" id="home_address"/>
+                                        <input type="text"  id="profile-date" disabled/>
                                         <i class="bi-lock"></i>
                                     </div>  
                                     
@@ -150,7 +152,7 @@
                                 <div class="inner">
                                     <span>LAST LOGIN DATE:</span><br clear="all"/>
                                     <div class="input-inner text">                              
-                                        <input type="text" value="2024-07-30 06:40:43" id="phone_number"/>
+                                        <input type="text"  id="profile-last-login" disabled/>
                                         <i class="bi-lock"></i>
                                     </div>  
                                 </div>
@@ -168,22 +170,30 @@
                             <div class="inner inner-div">
                                 <span>STAFF ROLE:</span><br clear="all"/>
                                 <div class="input-inner text">              
-                                    <input type="text" value="ADMIN" id="home_address"/>
+                                    <SELECT id="role_id">
+                                        <!-- <option value="staff">STAFF</option>
+                                        <option value="admin">ADMIN</option> -->
+                                        
+                                    </SELECT>
                                 
                                 </div>  
                                 
                             </div>
 
                             <div class="inner inner-div">
-                                <span>LAST LOGIN DATE:</span><br clear="all"/>
+                                <span>STATUS ID:</span><br clear="all"/>
                                 <div class="input-inner text">                              
-                                    <input type="text" value="ACTIVE" id="phone_number"/>
+                                    <SELECT id="status_id">
+                                        <!-- <option value="active">Active</option>
+                                        <option value="suspended">suspended</option> -->
+                                    </SELECT>
                                     
                                 </div>  
                             </div>
                         </div>
 
                     </div>
+                    <script>_get_staff_profile('<?php echo $ids ?>')</script>
 
                     <button>UPDATE PROFILE <i class="bi-check"></i></button>
                 </div>

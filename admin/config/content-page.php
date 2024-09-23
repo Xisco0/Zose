@@ -9,18 +9,17 @@
         </div>
         <div class="input-div">
             <div class="input-div-in">
-                <input type="text" placeholder="Email Address" id="email" required="required"/>
+                <input type="text" placeholder="Email Address" id="email_address"/>
                 <i class="bi-envelope"></i>
             </div>
             <div class="input-div-in">
-                <input type="password" placeholder="Password" id="password" required="required"/>
+                <input type="password" placeholder="Password" id="password"/>
                 <i class="bi-lock"></i>
             </div>
             <div class="btn-div">
-                <button onclick="dashboard_url()" id="submit_btn">Login <i class="bi-check"></i></button>
+                <button onclick="_login_admin_dashboard()" id="login_submit_button">Login <i class="bi-check"></i></button>
                 <span  onclick="_next_page('next_2')"> Forgot Password</span>
-                
-            
+     
             </div>
         </div>
         <div class="contact-div">
@@ -51,10 +50,6 @@
     </div>
 
 
-
-
-
-
     <div class="form log-div animated Fadein" id="next_2">
                     
         <div class="input">
@@ -64,12 +59,12 @@
             </div>
             <div class="input-div">
                 <div class="input-div-in">
-                    <input type="text" placeholder="Email Address"  required="required"/>
+                    <input type="text" placeholder="Email Address"  required="required" id="reset_password_email"/>
                     <i class="bi-envelope"></i>
                 </div>
                 
                 <div class="btn-div">
-                    <button  onclick="_get_page('reset_password')" class="submit" id="submit_btn">Proceed <i class="bi-arrow-right"></i></button>
+                    <button onclick="_reset_password()" id="submit_button" class="submit">Proceed <i class="bi-arrow-right"></i></button>
                     <div class="login">
                         <span>Already have an account ?</span><h3 onclick="_next_page('next_1')">Login</h3>
                     </div>
@@ -105,7 +100,7 @@
 
     
 <?php }?>
-
+ 
 <?php if ($page=='reset_password'){?>
     <div class="reset-div">
         <div class="reset-div-in">
@@ -115,7 +110,7 @@
                     <i class="bi-x"></i>
                 </div>
             </div>
-            <div class="alert alert-success"><i class="bi-person-fill-lock"></i> Dear <span>Bamirin Francis,</span> an <span>OTP</span> has been sent to your email address (<span>francisbamirin45@gmail.com</span>) to reset Password. 
+            <div class="alert alert-success"><i class="bi-person-fill-lock"></i> Dear <span id="pass_fullname">,</span> an <span>OTP</span> has been sent to your email address (<span id="pass_email"></span>) to reset Password. 
             Kindly check your INBOX or SPAM to confirm.</div>
 
 
@@ -125,25 +120,25 @@
                 <input type="text" placeholder="Enter OTP" id="otp"/>
             </div>
             <div class="label">
-                <span>OTP</span> not received? <span><i class="bi-send"></i> RESEND OTP</span>
+                <span>OTP</span> not received? <span onclick="_resend_otp()"><i class="bi-send"></i> RESEND OTP</span>
             </div>
             <div class="input-div">
                 <span>CREATE PASSWORD: </span>
                 </br>
-                <input type="text" placeholder="CREATE PASSWORD" id="create_password"/>
+                <input type="password" placeholder="CREATE PASSWORD" id="create_password"/>
                 <p>Atleast 8 Characters required including lower & upper cases and special characters and number</p>
             </div>
             <div class="input-div">
                 <span>CONFIRM PASSWORD: </span>
                 </br>
-                <input type="text" placeholder="CONFIRM PASSWORD" id="confirm_password"/>
+                <input type="password" placeholder="CONFIRM PASSWORD" id="confirm_password"/>
             </div>
-            <button onclick="_get_section('password_reset_completed')"><i class="bi-check"></i>Reset Password</button>
+            <button onclick="_finish_reset_password()"><i class="bi-check"></i>Reset Password</button>
         </div>
     </div>
 <?php }?>
 
-<?php if ($page=='password_reset_completed'){?>
+<?php if ($page=='password_reset_successful'){?>
 
     <div class="reset-success">
     <div class="reset-success-div">

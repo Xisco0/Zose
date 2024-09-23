@@ -9,8 +9,13 @@
 		require_once ('content-page.php');
 	break;
 
-	case 'password-reset-successful':
-		$page='password_reset_completed';
+	case 'reset_password':
+		$page='reset_password';
+	  	require_once('content-page.php');
+	break;
+
+	case 'password_reset_successful':
+		$page='password_reset_successful';
 	  	require_once('content-page.php');
 	break;
 	

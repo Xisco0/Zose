@@ -2,11 +2,12 @@
     <div class="header-div">
     
         <div class="text-div">
-            <div class="text-div-in"><span>Welcome Xisco</span><img src="./all-images/hand.gif" alt="hand"></div>
+            <div class="text-div-in"><span>Welcome<p id="display-fullname"></p></span><img src="./all-images/hand.gif" alt="hand"></div>
+            
             <div class="text-div-i">
-                <p>last login date: <small>28/08/2022</small></p>
+                <p>last login date: <small id="display-last-login"></small></p>
                 <p>|</p>
-                <span>Status: active</span>
+                <span>Status: <p id="display-status-name"></p></span>
             </div>
         </div>
     
@@ -33,5 +34,11 @@
             <hr/>
             <img src="all-images/profile.png" alt="profile">
         </div>
+      
+
+            <script>
+            //   var staff_id = sessionStorage.getItem('staff_id');
+                _get_staff_login(staff_id);
+            </script>
     </div>
  </header>

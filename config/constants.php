@@ -15,8 +15,10 @@
 
 
 <script>
+var apiKey='43411331-74e2-46fd-8cb5-9dc4742dd15c';
 var website_url='http://localhost/zosedemo.com';
-var admin_login_local_url= website_url+'/admin/config/code'
-var admin_portal_local= website_url+'/admin/a';
+var admin_login_local_url= website_url+'/admin/config/code';
+var admin_portal_local= website_url+'/admin/a/';
 var admin_portal_dashboard= website_url+'/admin/a/config/code';
+var endpoint = 'http://localhost/zosedemo-api/api/user';
 </script>
