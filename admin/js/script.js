@@ -47,6 +47,7 @@ function alert_close(){
     var email_addressRegex =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email_address== ''){
+      $('#email_address').addClass('complain');
       $('#warning-div').html('<div><i class="bi-exclamation-circle"></i></div> EMAIL ERROR!<br /><span>Fill email To Continue</span>').fadeIn(500).delay(3000).fadeOut(100);
     }else if (!email_addressRegex.test(email_address)){
       $('#email_address').addClass('complain');

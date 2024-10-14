@@ -289,8 +289,6 @@ function _all_active_staff(status_id) {
 
 
 
-
-
 function _get_form_with_id(page, ids){
   $('#overlay-div').html('<div class="ajax-loader"><br><img src="all-images/ajax-loader.gif"/></div>').fadeIn(500);
   var action='_get_form_with_id';
@@ -305,16 +303,6 @@ function _get_form_with_id(page, ids){
       
   });
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -354,11 +342,6 @@ function _get_role(){
   }
   });
 }
-
-
-
-
-
 
 
 
@@ -428,13 +411,14 @@ function _get_staff_profile(staff_id){
         var staff_data = info.data;
         var staff_profile_fullname = staff_data.fullname;
         var last_login = staff_data.last_login;
-        var staff_id = staff_data.staff_id;
-        var staff_role = staff_data.role_name;
+        var role_name = staff_data.role_name;
         var status_name = staff_data.status_name;
         var email_address = staff_data.email_address;
-        var phone_number = staff_data.phone_number;
         var home_address = staff_data.home_address;
-        var date = staff_data.date;
+        var phone_number = staff_data.phone_number;
+        var staff_id = staff_data.staff_id;
+        var profile_date = staff_data.date;
+    
 
         
         $("#staff-profile-fullname").html(staff_profile_fullname);
@@ -442,14 +426,13 @@ function _get_staff_profile(staff_id){
         $("#get-staff-status-name").html(status_name);
 
         $("#profile-fullname").val(staff_profile_fullname);
-        $("#get-staff-role-id").val(staff_role);
-        $("#profile-last-login").val(last_login);
-        $("#get-staff-status-name").val(status_name);
         $("#profile-email").val(email_address);
-        $("#profile-phone-number").val(phone_number);
         $("#profile-home-address").val(home_address);
+        $("#profile-phone-number").val(phone_number);
         $("#profile-staff-id").val(staff_id);
-        $("#profile-date").val(date);
+        $("#profile-last-login").val(last_login);
+        $("#profile-date").val(profile_date);
+       
 
       
 
@@ -469,45 +452,54 @@ function _get_staff_profile(staff_id){
   }
 
 
-  // function _update_all_staff(staff_id){
-  //   var dataString ='fullname=' + fullname + '&phone_number=' + phone_number + '&email_address=' + email_address + '&role_id=' + role_id + '&status_id=' + status_id + '&staff_id=' + staff_id;
+  function _update_all_staff(staff_id){
+
+    var dataString ='fullname=' + staff_profile_fullname + '&phone_number=' + phone_number + '&home_address=' + home_address + '&email_address=' + email_address + '&role_id=' + role_id + '&status_id=' + status_id + '&staff_id=' + staff_id;
   
+  
+  
+      if (confirm("Confirm!!\n\n ARE YOU SURE TO PERFORM THIS ACTION ?")) {
+        const btn_text = $("#submit_btn").html();
+        $("#submit_btn").html('<i class="fa fa-spinner fa-spin"></i> PROCESSING');
+        document.getElementById("submit_btn").disabled = true;
+    
       
-  //     $.ajax({
-  //       type: 'POST',
-  //       url: endpoint +'/update-staff?access_key=' + access_key,
-  //       data: dataString,
-  //       dataType: 'json',
-  //       beforeSend: function(xhr) {
-  //         xhr.setRequestHeader('apiKey', apiKey);
-  //       },
-  //       cache: false,
-  //       success: function (info){
-  //         var success = info.success;
-  //         var message = info.message;
-  //         var access_check = info.check;
+      $.ajax({
+        type: 'POST',
+        url: endpoint +'/update-staff?access_key=' + access_key,
+        data: dataString,
+        dataType: 'json',
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader('apiKey', apiKey);
+        },
+        cache: false,
+        success: function (info){
+          var success = info.success;
+          var message = info.message;
+          var access_check = info.check;
     
-  //         if (access_check==0){
-  //           _logOut();
-  //         }else{
+          if (access_check==0){
+            _logOut();
+          }else{
     
-  //         if (success == true){
+          if (success == true){
           
-  //           $('#success-div').html('<div><i class="bi-check-all"></i></div>' + 'SUCCESS!<br>' + message).fadeIn(500).delay(5000).fadeOut(100);
+            $('#success-div').html('<div><i class="bi-check-all"></i></div>' + 'SUCCESS!<br>' + message).fadeIn(500).delay(5000).fadeOut(100);
     
-  //           $('#submit_btn').html(btn_text);
-  //             document.getElementById('submit_btn').disabled = false;
-  //             alert_close();
-  //         }else{
-  //           $('#warning-div').html('<div><i class="bi-exclamation-circle"></i></div>'  +'ERROR!' + ' ' + message).fadeIn(500).delay(3000).fadeOut(100);
+            $('#submit_btn').html(btn_text);
+              document.getElementById('submit_btn').disabled = false;
+          }else{
+            $('#warning-div').html('<div><i class="bi-exclamation-circle"></i></div>'  +'ERROR!' + ' ' + message).fadeIn(500).delay(3000).fadeOut(100);
     
-  //           $('#submit_btn').html(btn_text);
-  //           document.getElementById('submit_btn').disabled = false;
-  //         }
-  //       }
-  //       },
+            $('#submit_btn').html(btn_text);
+            document.getElementById('submit_btn').disabled = false;
+          }
+        }
+        },
     
-  //     });
-  //   }
+      });
+    }
+  }
+  
   
   

@@ -12,7 +12,7 @@
                <i class="bi-x"></i>
            </div>
        </div>
-   
+    
     
         <div class="staff-add-body">
             <div class="alert alert-success staff-alert">Kindly fill the form below to <span>ADD NEW STAFF</span></div>
@@ -170,11 +170,10 @@
                             <div class="inner inner-div">
                                 <span>STAFF ROLE:</span><br clear="all"/>
                                 <div class="input-inner text">              
-                                    <SELECT id="role_id">
-                                        <!-- <option value="staff">STAFF</option>
-                                        <option value="admin">ADMIN</option> -->
-                                        
-                                    </SELECT>
+                                    <select id="role_id">
+                                        <script>_get_role('<?php echo $ids ?>')</script>
+   
+                                    </select>
                                 
                                 </div>  
                                 
@@ -184,8 +183,8 @@
                                 <span>STATUS ID:</span><br clear="all"/>
                                 <div class="input-inner text">                              
                                     <SELECT id="status_id">
-                                        <!-- <option value="active">Active</option>
-                                        <option value="suspended">suspended</option> -->
+                                    <script>_get_status('<?php echo $ids ?>')</script>
+                                      
                                     </SELECT>
                                     
                                 </div>  
@@ -195,7 +194,7 @@
                     </div>
                     <script>_get_staff_profile('<?php echo $ids ?>')</script>
 
-                    <button>UPDATE PROFILE <i class="bi-check"></i></button>
+                    <button onclick="_update_all_staff('<?php echo $ids ?>')" id="submit_btn">UPDATE PROFILE <i class="bi-check"></i></button>
                 </div>
             </div>
         </div>
